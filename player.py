@@ -27,4 +27,24 @@ class Player:
 
         self.__coin.toss()
 
+    def get_coin_side(self):
+        """
+        This returns the side the coin flip is
+        """
+
+        return self.__coin.get_sideup()
     
+    def win_coin(self):
+        """
+        Add coin to waller
+        """
+
+        self.__wallet += 1
+
+    def lose_coin(self):
+        """
+        remove coin to waller
+        """
+
+        self.__wallet -= 1
+        
