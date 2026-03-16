@@ -14,7 +14,7 @@ class Coin:
 
     def __init__(self):
         """
-        This initializes the coin
+        This initializes the coin to heads
         """
 
         self.__sideup = "Heads"
