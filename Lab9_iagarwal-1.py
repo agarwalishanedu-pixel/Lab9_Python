@@ -19,7 +19,7 @@ def main():
     player2 = Player("Player 2")
 
     print(f"{player1.get_name()} has {player1.get_wallet()} coins.")
-    print(f"{player1.get_name()} has {player1.get_wallet()} coins.")
+    print(f"{player2.get_name()} has {player2.get_wallet()} coins.")
 
     print("")
     play = input("Do you want to toss the coins? (y/n): ")
@@ -33,8 +33,8 @@ def main():
         player2.toss_coin()
 
         #it sets a variable to store value
-        sidep1 = player1.get_coin_side
-        sidep2 = player2.get_coin_side
+        sidep1 = player1.get_coin_side()
+        sidep2 = player2.get_coin_side()
 
         print(f"{player1.get_name()} tossed {sidep1}")
         print(f"{player2.get_name()} tossed {sidep2}")
@@ -51,12 +51,26 @@ def main():
 
         print("")
         print(f"{player1.get_name()} has {player1.get_wallet()} coins.")
-        print(f"{player1.get_name()} has {player1.get_wallet()} coins.")
+        print(f"{player2.get_name()} has {player2.get_wallet()} coins.")
         print("")
 
         play = input("Do you want to toss the coins? (y/n): ")
-        
+        print("")
+        #If either player has no balance left then it changes the condition value to end loop.
         if(player1.get_wallet() == 0 or player2.get_wallet() == 0):
             play = "n"
+
+    print("--- Final Score ---")
+    print(f"{player1.get_name()} has {player1.get_wallet()} coins.")
+    print(f"{player2.get_name()} has {player2.get_wallet()} coins.")
+
+    #Check for who wins or has more coins
+    if player1.get_wallet() > player2.get_wallet():
+        print("Player 1 wins!")
+    elif player2.get_wallet() > player1.get_wallet():
+        print("Player 2 wins!")
+    else:
+        print("It's a draw!")
+
 
 main()
