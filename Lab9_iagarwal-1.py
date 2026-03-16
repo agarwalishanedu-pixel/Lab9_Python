@@ -12,4 +12,25 @@ from player import Player
 #Make the main function
 def main():
 
-    print()
+    print("--- Coin Match Game ---")
+
+    # Create the two players
+    player1 = Player("Player 1")
+    player2 = Player("Player 2")
+
+    print(f"{player1.get_name()} has {player1.get_wallet()} coins.")
+    print(f"{player1.get_name()} has {player1.get_wallet()} coins.")
+
+    print("")
+    play = input("Do you want to toss the coins? (y/n): ")
+    print("")
+
+    while play.lower() == "y":
+        
+        #Both player toss coin
+        print("Tossing...")
+        player1.toss_coin()
+        player2.toss_coin()
+
+
+main()
