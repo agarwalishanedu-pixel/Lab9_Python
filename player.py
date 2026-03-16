@@ -47,4 +47,18 @@ class Player:
         """
 
         self.__wallet -= 1
+
+    def get_wallet(self):
+        """
+        return current val of wallet
+        """
+
+        return self.__wallet
+    
+    def get_name(self):
+        """
+        return player name
+        """
+
+        return self.__name
         
