@@ -11,4 +11,27 @@ import random
 #Create the class
 class Coin:
     # This class is representing a single tossable coin
-    
+
+    def __init__(self):
+        """
+        This initializes the coin
+        """
+
+        self.__sideup = "Heads"
+
+    def toss(self):
+        """
+        This function does the tossing and generates the value
+        """
+
+        if random.randint(0, 1) == 0:
+            self.__sideup = "Heads"
+        else:
+            self.__sideup = "Tails"
+
+    def get_sideup(self):
+        """
+        This returns the value of the flip
+        """
+
+        return self.__sideup
